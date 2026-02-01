@@ -1,10 +1,21 @@
 # nanochat
 
-> **This is a fork of [karpathy/nanochat](https://github.com/karpathy/nanochat) enhanced with Claude Code integration for AI-assisted LLM training.**
+> **This is a fork of [karpathy/nanochat](https://github.com/karpathy/nanochat) enhanced with Claude Code integration for AI-assisted LLM training and visual learning.**
 >
-> **Claude Code Skills**: `/debug-oom`, `/debug-loss`, `/debug-distributed`, `/train`, `/explain`, `/scaling`, and more.
+> ### 🎯 Claude Code Skills
+> **Troubleshooting**: `/debug-oom`, `/debug-loss`, `/debug-distributed`, `/debug-stuck`
+> **Training**: `/train`, `/config-memory`, `/scaling`, `/gpu-check`, `/rent-gpu`
+> **Learning**: `/explain <module>` with ASCII diagrams
 >
-> See [`docs/CLAUDE_CODE_INTEGRATION.md`](docs/CLAUDE_CODE_INTEGRATION.md) for the full guide, or the [`docs/`](docs/) folder for additional documentation.
+> ### 🎬 Remotion Visualization
+> **Create educational videos** explaining transformer architecture, training dynamics, and scaling laws:
+> ```
+> /visualize          # Generate animated videos with Remotion
+> /remotion-setup     # Set up a video project
+> ```
+> Powered by [Remotion](https://remotion.dev) - React-based programmatic video creation.
+>
+> 📚 **[Full Documentation](docs/CLAUDE_CODE_INTEGRATION.md)** | 🎥 **[Visualization Guide](docs/CLAUDE_CODE_INTEGRATION.md#visualization-with-remotion)**
 
 ---
 
@@ -115,6 +126,59 @@ I've published a number of guides that might contain helpful information:
 - [Jan 7 miniseries v1](https://github.com/karpathy/nanochat/discussions/420) documents the first nanochat miniseries of models.
 - To customize your nanochat, see [Guide: infusing identity to your nanochat](https://github.com/karpathy/nanochat/discussions/139) in Discussions, which describes how you can tune your nanochat's personality through synthetic data generation and mixing that data into the SFT stage.
 - To add new abilities to nanochat, see [Guide: counting r in strawberry (and how to add abilities generally)](https://github.com/karpathy/nanochat/discussions/164).
+
+## Claude Code Integration
+
+This fork includes comprehensive [Claude Code](https://claude.ai/code) integration designed from real pain points discovered in nanochat GitHub issues, LLM workflow blogs, and distributed training debugging guides.
+
+### Visualization & Learning
+
+Create educational videos explaining LLM concepts using [Remotion](https://remotion.dev):
+
+```bash
+# In Claude Code, use the visualization skill
+> /visualize
+
+# Available visualizations:
+# - Transformer Architecture (layer-by-layer animation)
+# - Training Loss (dynamic curves with annotations)
+# - Attention Mechanism (animated attention patterns)
+# - Scaling Laws (Chinchilla curves)
+```
+
+Example workflow:
+```bash
+# Set up Remotion project
+npm create video@latest nanochat-visualizations
+cd nanochat-visualizations && npm install
+
+# Preview at localhost:3000
+npm run dev
+
+# Render to video
+npx remotion render TransformerArchitecture out/transformer.mp4
+```
+
+### Troubleshooting Skills
+
+| Skill | Description |
+|-------|-------------|
+| `/debug-oom` | Fix CUDA out of memory with GPU-specific recommendations |
+| `/debug-loss` | Analyze loss spikes, plateaus, and divergence |
+| `/debug-distributed` | Debug NCCL timeouts and torchrun issues |
+| `/debug-stuck` | Diagnose training hangs (GC pauses, deadlocks) |
+
+### Training & Setup Skills
+
+| Skill | Description |
+|-------|-------------|
+| `/train` | Interactive training launcher |
+| `/config-memory` | Calculate optimal batch size for your GPU |
+| `/scaling` | Model scaling calculator (compute, tokens, cost) |
+| `/explain <module>` | Architecture explainer with ASCII diagrams |
+| `/rent-gpu` | Cloud GPU rental comparison guide |
+
+See [`docs/CLAUDE_CODE_INTEGRATION.md`](docs/CLAUDE_CODE_INTEGRATION.md) for complete documentation.
 
 ## File structure
 

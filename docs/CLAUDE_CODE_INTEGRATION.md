@@ -1,6 +1,15 @@
 # Claude Code Integration for nanochat
 
-This document describes the Claude Code integration for nanochat, providing AI-assisted debugging, training guidance, and educational tools.
+This document describes the Claude Code integration for nanochat, providing AI-assisted debugging, training guidance, educational tools, and **video visualization capabilities**.
+
+## Highlights
+
+| Category | Skills | Purpose |
+|----------|--------|---------|
+| 🔧 **Troubleshooting** | `/debug-oom`, `/debug-loss`, `/debug-distributed` | Fix common training issues |
+| 🚀 **Training** | `/train`, `/config-memory`, `/scaling` | Configure and launch training |
+| 📚 **Education** | `/explain <module>` | Understand architecture with ASCII diagrams |
+| 🎬 **Visualization** | `/visualize`, `/remotion-setup` | Create animated educational videos |
 
 ## Research-Driven Design
 
@@ -36,6 +45,7 @@ This integration was designed based on real pain points discovered through syste
 | Cloud GPU confusion | Discussion #216 | `/rent-gpu` comparison guide |
 | Lost experiment context | Workflow pain points | Experiment tracker agent |
 | Slow onboarding | General feedback | `/explain` with ASCII diagrams |
+| Abstract concepts hard to grasp | Learning feedback | `/visualize` animated videos |
 
 ## Quick Start
 
@@ -46,11 +56,26 @@ After cloning nanochat, Claude Code will automatically have access to these capa
 cd nanochat
 claude
 
-# Use slash commands
+# Training & debugging
 > /train           # Interactive training launcher
 > /debug-oom       # Fix CUDA memory errors
-> /explain gpt     # Architecture explanation with diagrams
 > /gpu-check       # Validate GPU environment
+
+# Learning & visualization
+> /explain gpt     # Architecture explanation with diagrams
+> /visualize       # Create animated educational videos
+```
+
+### Quick Visualization Setup
+
+```bash
+# Create a Remotion project for nanochat videos
+npm create video@latest nanochat-visualizations
+cd nanochat-visualizations && npm install
+npm run dev  # Preview at localhost:3000
+
+# In Claude Code, generate video components
+> /visualize
 ```
 
 ## Available Skills (Slash Commands)
