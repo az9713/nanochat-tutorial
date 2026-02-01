@@ -175,3 +175,55 @@ Run tokenizer training first: `python -m scripts.tok_train`
 
 ### Model Checkpoint Not Found
 Run base training first, or specify `--model-tag` and `--step` explicitly.
+
+## Claude Code Skills
+
+This repository includes Claude Code skills for AI-assisted development. These skills were designed based on real pain points discovered through research of:
+- nanochat GitHub issues and discussions (#216, #344, etc.)
+- [LLM Workflow Pain Points](https://blog.laurentcharignon.com/post/2025-09-30-llm-workflow-part1-pain-points/)
+- [NCCL Debugging Guide](https://medium.com/@devaru.ai/debugging-nccl-errors-in-distributed-training-a-comprehensive-guide-28df87512a34)
+- [Gradient Accumulation Bugs](https://unsloth.ai/blog/gradient)
+
+### Troubleshooting Skills
+| Command | Description |
+|---------|-------------|
+| `/debug-oom` | Fix CUDA out of memory errors |
+| `/debug-loss` | Analyze training loss anomalies |
+| `/debug-distributed` | Debug multi-GPU/NCCL issues |
+| `/debug-stuck` | Diagnose training hangs |
+| `/fix-checkpoint` | Recover from checkpoint issues |
+| `/verify-data` | Validate dataset integrity |
+
+### Setup & Education Skills
+| Command | Description |
+|---------|-------------|
+| `/train` | Interactive training launcher |
+| `/gpu-check` | Validate GPU environment |
+| `/config-memory` | Calculate optimal batch size |
+| `/scaling` | Model scaling calculator |
+| `/explain <module>` | Architecture explainer with diagrams |
+| `/rent-gpu` | Cloud GPU rental guide |
+
+See [docs/CLAUDE_CODE_INTEGRATION.md](docs/CLAUDE_CODE_INTEGRATION.md) for full documentation.
+
+## Experiment Log
+
+Track your experiments below. Claude will reference this for context.
+
+### Template
+| Date | Run | Config | Loss | CORE | Notes |
+|------|-----|--------|------|------|-------|
+| YYYY-MM-DD | run_name | d=XX, lr=XX | X.XX | X.XXX | Notes |
+
+### Current Best
+Not yet established. Run experiments and update this section.
+
+### Things to Try
+- [ ] Baseline with default settings (d=24)
+- [ ] Quick iteration runs (d=12)
+- [ ] Different learning rates
+- [ ] Longer training (Chinchilla ratio)
+- [ ] Different window patterns
+
+### Experiments
+(Add your experiments here)

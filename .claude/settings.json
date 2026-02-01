@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "command": "bash .claude/hooks/pre-tool-check.sh"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write(*.py)",
+        "command": "ruff format ${file} 2>/dev/null || true"
+      }
+    ]
+  }
+}
