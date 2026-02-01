@@ -2,7 +2,7 @@
 
 ## Situation
 - **Upstream**: `karpathy/nanochat` (has latest updates from Karpathy)
-- **Your fork**: `az9713/nanochat` (has 20 merged PRs with custom features)
+- **Your fork**: `az9713/nanochat-with-claude` (has Claude Code integration + custom features)
 - **Local**: `C:\Users\simon\Downloads\nanochat-master` (has new documentation)
 - **Goal**: Get Karpathy's latest changes WITHOUT losing your custom features
 
@@ -25,7 +25,7 @@ From your 20 merged PRs:
 ### Step 1: Clone Your Fork (fresh start)
 ```bash
 cd C:\Users\simon\Downloads
-git clone https://github.com/az9713/nanochat.git nanochat-fork
+git clone https://github.com/az9713/nanochat-with-claude.git nanochat-fork
 cd nanochat-fork
 ```
 
@@ -85,7 +85,7 @@ git push origin main
 
 ## Git Remote Layout
 ```
-origin   -> https://github.com/az9713/nanochat.git   (YOUR fork - push here)
+origin   -> https://github.com/az9713/nanochat-with-claude.git   (YOUR fork - push here)
 upstream -> https://github.com/karpathy/nanochat.git (Karpathy's - pull from here)
 ```
 

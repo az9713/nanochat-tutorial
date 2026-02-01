@@ -1,8 +1,10 @@
 # nanochat
 
-> **This is a fork of [karpathy/nanochat](https://github.com/karpathy/nanochat) with added tutorials and documentation for learning and development.**
+> **This is a fork of [karpathy/nanochat](https://github.com/karpathy/nanochat) enhanced with Claude Code integration for AI-assisted LLM training.**
 >
-> See the [`docs/`](docs/) folder for comprehensive guides including fork sync instructions, quick start tutorials, and architecture documentation.
+> **Claude Code Skills**: `/debug-oom`, `/debug-loss`, `/debug-distributed`, `/train`, `/explain`, `/scaling`, and more.
+>
+> See [`docs/CLAUDE_CODE_INTEGRATION.md`](docs/CLAUDE_CODE_INTEGRATION.md) for the full guide, or the [`docs/`](docs/) folder for additional documentation.
 
 ---
 
