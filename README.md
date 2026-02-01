@@ -1,5 +1,11 @@
 # nanochat
 
+> **This is a fork of [karpathy/nanochat](https://github.com/karpathy/nanochat) with added tutorials and documentation for learning and development.**
+>
+> See the [`docs/`](docs/) folder for comprehensive guides including fork sync instructions, quick start tutorials, and architecture documentation.
+
+---
+
 ![nanochat logo](dev/nanochat.png)
 ![scaling laws](dev/scaling_laws_jan26.png)
 
